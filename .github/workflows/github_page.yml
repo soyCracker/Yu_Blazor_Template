@@ -13,7 +13,6 @@ env:
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 7.0.x
   WORKING_DIRECTORY: Yu_Blazor_Template
-  PUBLISH_BRANCH: feature_github_page
   
 jobs:
   deploy-to-github-pages:
@@ -46,5 +45,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.4.1
       with:
-          branch: ${{ PUBLISH_BRANCH }}
+          branch: feature_github_page
           folder: release/wwwroot
