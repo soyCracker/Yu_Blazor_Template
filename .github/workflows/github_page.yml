@@ -5,9 +5,9 @@ name: .NET
 
 on:
   push:
-    branches: [ "feature_speed" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "feature_speed" ]
+    branches: [ "main" ]
     
 env:
   CONFIGURATION: Release
@@ -28,8 +28,8 @@ jobs:
         include-prerelease: true
 
     # 安裝 aot 工具  
-    - name: 安裝 aot 工具
-      run: dotnet workload install wasm-tools
+    #- name: 安裝 aot 工具
+    #  run: dotnet workload install wasm-tools
 
     # 修改成專案名稱    
     - name: Publish .NET Core Project
