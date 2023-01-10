@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
 using System.IO;
+using System.IO.Compression;
 using Yu_Blazor_Template;
 using Yu_Blazor_Template.Extensions;
 
