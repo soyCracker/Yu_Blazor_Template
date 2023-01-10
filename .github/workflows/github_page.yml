@@ -45,5 +45,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4.4.1
       with:
-          branch: feature_github_page
+          branch: publish_github_page
           folder: release/wwwroot
