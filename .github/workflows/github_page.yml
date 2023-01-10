@@ -5,9 +5,9 @@ name: .NET
 
 on:
   push:
-    branches: [ "feature_github_page" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "feature_github_page" ]
+    branches: [ "main" ]
     
 env:
   CONFIGURATION: Release
