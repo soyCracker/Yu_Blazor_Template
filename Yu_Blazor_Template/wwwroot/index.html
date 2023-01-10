@@ -44,7 +44,9 @@
             get: () => window.localStorage['BlazorCulture'],
             set: (value) => window.localStorage['BlazorCulture'] = value
         };
+    </script>
 
+    <script type="module">
         // Brotli壓縮
         Blazor.start({
             loadBootResource: function (type, name, defaultUri, integrity) {
