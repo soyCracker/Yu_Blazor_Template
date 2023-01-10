@@ -29,25 +29,46 @@
         <a class="dismiss">🗙</a>
     </div>
 
-    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
     <script src="_content/Microsoft.Authentication.WebAssembly.Msal/AuthenticationService.js"></script>
-
     <!--  MudBlazor  -->
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+    <!--  Font Awesome  -->
+    <script src="https://kit.fontawesome.com/4206fe85f1.js" crossorigin="anonymous"></script>
+    <!-- Brotli壓縮 -->
+    <script src="lib/brotli/decode.min.js" type="module"></script>
 
-    <!--  語系  -->
     <script>
+        // 語系
         window.blazorCulture = {
             get: () => window.localStorage['BlazorCulture'],
             set: (value) => window.localStorage['BlazorCulture'] = value
         };
+
+        // Brotli壓縮
+        Blazor.start({
+            loadBootResource: function (type, name, defaultUri, integrity) {
+                if (type !== 'dotnetjs' && location.hostname !== 'localhost') {
+                    return (async function () {
+                        const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+                        if (!response.ok) {
+                            throw new Error(response.statusText);
+                        }
+                        const originalResponseBuffer = await response.arrayBuffer();
+                        const originalResponseArray = new Int8Array(originalResponseBuffer);
+                        const decompressedResponseArray = BrotliDecode(originalResponseArray);
+                        const contentType = type ===
+                            'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
+                        return new Response(decompressedResponseArray,
+                            { headers: { 'content-type': contentType } });
+                    })();
+                }
+            }
+        });
     </script>
 
-    <!--  Font Awesome  -->
-    <script src="https://kit.fontawesome.com/4206fe85f1.js" crossorigin="anonymous"></script>
-
     <!-- My JS -->
-    <script src="js/ts_output/Hello.js"></script>
+    <script src="lib/ts_output/Hello.js"></script>
 </body>
 
 </html>

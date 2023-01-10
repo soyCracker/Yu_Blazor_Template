@@ -4,7 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # Typescript output folder
-*/wwwroot/js/ts_output/*
+**/ts_output/*
 
 # User-specific files
 *.rsuser

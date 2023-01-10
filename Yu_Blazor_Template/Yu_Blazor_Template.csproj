@@ -30,4 +30,8 @@
     <TypeScriptCompile Include="TS\Hello.ts" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\ts_output\" />
+  </ItemGroup>
+
 </Project>
