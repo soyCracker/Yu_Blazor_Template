@@ -5,9 +5,9 @@ name: .NET
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "feature_speed" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "feature_speed" ]
     
 env:
   CONFIGURATION: Release
