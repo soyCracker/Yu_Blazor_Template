@@ -111,8 +111,8 @@
       "System.Xml.Linq.dll": "sha256-ap5WySSl0wqPalvBrpgGd4e8ik0nB8N8D5hQBUhZXho=",
       "System.Xml.ReaderWriter.dll": "sha256-dxxb2Bb8KzE79u9FDU8HxCG84Xkr7WZKhET9IfXuyHY=",
       "System.Xml.XDocument.dll": "sha256-KfMmFEBycsIfjhhWn9x2rT5m8rNcBejKJ\/DgV0r\/sRU=",
-      "Yu_Blazor_Template.dll": "sha256-g4MrWUtTkQRfXgzUDP4+4qWOG6+ngi7PWVfjZE4R3sc=",
-      "Yu_Service.dll": "sha256-cR+spmfXukB5HdmeKpDHZa8QzHHf+c9N9rmIszfTQoU="
+      "Yu_Blazor_Template.dll": "sha256-qAXsg7xOPspoU8RlwuXN7JcwqdRuxYMFI7gI7Wsv5Rk=",
+      "Yu_Service.dll": "sha256-z7btkqvrFyqJpl2M9ROZHuZHrOLICe2O6OPAvJdq5O4="
     },
     "extensions": null,
     "lazyAssembly": null,
