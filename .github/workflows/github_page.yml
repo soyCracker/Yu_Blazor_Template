@@ -27,9 +27,9 @@ jobs:
         dotnet-version: ${{ env.DOTNET_CORE_VERSION }}
         include-prerelease: true
 
-    # 安裝 aot 工具  
-    #- name: 安裝 aot 工具
-    #  run: dotnet workload install wasm-tools
+    # 安裝 .NET WebAssembly build tools，支援Runtime relinking和aot
+    - name: 安裝 .NET WebAssembly build tools
+      run: dotnet workload install wasm-tools
 
     # 修改成專案名稱    
     - name: Publish .NET Core Project
