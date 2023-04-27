@@ -3,9 +3,9 @@ using Microsoft.Authentication.WebAssembly.Msal.Models;
 using Microsoft.Graph;
 using System.Net.Http.Headers;
 
-namespace Yu_Blazor_Template.Extensions
+namespace Yu_Blazor_Template.Settings
 {
-    public static class MsGraphClientExtension
+    public static class MsGraphClientSetting
     {
         public static IServiceCollection AddGraphClient(this IServiceCollection services, params string[] scopes)
         {

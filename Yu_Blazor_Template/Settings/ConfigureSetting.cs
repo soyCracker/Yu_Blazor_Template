@@ -1,13 +1,10 @@
 ﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Graph.ExternalConnectors;
 using Microsoft.JSInterop;
 using System.Globalization;
-using System.Reflection.Metadata;
 
-namespace Yu_Blazor_Template.Extensions
+namespace Yu_Blazor_Template.Settings
 {
-    public static class ConfigureExtension
+    public static class ConfigureSetting
     {
         public static async Task LoadSettingJson(this WebAssemblyHostConfiguration configuration, HttpClient httpClient)
         {

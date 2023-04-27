@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
-using System.IO;
-using System.IO.Compression;
 using Yu_Blazor_Template;
-using Yu_Blazor_Template.Extensions;
+using Yu_Blazor_Template.Settings;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
