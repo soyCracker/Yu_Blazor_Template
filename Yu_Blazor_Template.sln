@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33209.295
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu_Blazor_Template", "Yu_Blazor_Template\Yu_Blazor_Template.csproj", "{3F3127BC-7619-4FA0-B9A3-62C3BA974B9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu_Service", "Yu_Service\Yu_Service.csproj", "{79EE9F56-1C1A-47E1-BB39-BD05BB0C20BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu_Service", "Yu_Service\Yu_Service.csproj", "{79EE9F56-1C1A-47E1-BB39-BD05BB0C20BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu_Blazor_Template.API", "Yu_Blazor_Template.API\Yu_Blazor_Template.API.csproj", "{7B19BE4E-09C9-4EE0-B688-4DA48F1BA142}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{79EE9F56-1C1A-47E1-BB39-BD05BB0C20BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79EE9F56-1C1A-47E1-BB39-BD05BB0C20BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79EE9F56-1C1A-47E1-BB39-BD05BB0C20BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B19BE4E-09C9-4EE0-B688-4DA48F1BA142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B19BE4E-09C9-4EE0-B688-4DA48F1BA142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B19BE4E-09C9-4EE0-B688-4DA48F1BA142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B19BE4E-09C9-4EE0-B688-4DA48F1BA142}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

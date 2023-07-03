@@ -1,0 +1,82 @@
+﻿@using Yu_Blazor_Template.ViewModels.Currency;
+@inject ICurrencyViewModel currencyVM;
+@using System.ComponentModel;
+@implements IDisposable
+
+@page "/Currency"
+
+<PageTitle>Currency</PageTitle>
+
+<MudPaper Class="pa-16 ma-2" Elevation="3">
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">
+                    <MudText><b>CurrencyType</b></MudText> 
+                </th>
+                <th scope="col">
+                    <MudText><b>ExRate</b></MudText>
+                </th>
+                <th scope="col">
+                    <MudText><b>UpdateTime</b></MudText>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var currencyModel in currencyVM.RTER_CurrencyList)
+            {
+                <tr>
+                    <td>
+                        <MudText>@currencyModel.ExType</MudText>
+                    </td>
+                    <td>
+                        <MudText>@currencyModel.Exrate</MudText>
+                    </td>
+                    <td>
+                        <MudText>@currencyModel.UTC</MudText>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</MudPaper>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        currencyVM.PropertyChanged += async (sender, e) =>
+        {
+            await InvokeAsync(() =>
+            {
+                StateHasChanged();
+            });
+        };
+
+        await base.OnInitializedAsync();
+
+        await RefreshWork();
+    }
+
+    private async Task RefreshWork()
+    {
+        while(true)
+        {
+            await currencyVM.RefreshAsync();
+            await Task.Delay(1000 * 5);
+        }
+    }
+
+    async void OnPropertyChangedHandler(object sender, PropertyChangedEventArgs e)
+    {
+        await InvokeAsync(() =>
+        {
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose()
+    {
+        currencyVM.PropertyChanged -= OnPropertyChangedHandler;
+    }
+}
