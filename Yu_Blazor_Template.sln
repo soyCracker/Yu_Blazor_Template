@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu_Blazor_Template", "Yu_Bl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu_Service", "Yu_Service\Yu_Service.csproj", "{79EE9F56-1C1A-47E1-BB39-BD05BB0C20BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yu_Blazor_Template.API", "Yu_Blazor_Template.API\Yu_Blazor_Template.API.csproj", "{7B19BE4E-09C9-4EE0-B688-4DA48F1BA142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yu_Blazor_Template.API", "Yu_Blazor_Template.API\Yu_Blazor_Template.API.csproj", "{7B19BE4E-09C9-4EE0-B688-4DA48F1BA142}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

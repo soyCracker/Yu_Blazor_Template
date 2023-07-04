@@ -45,7 +45,7 @@ namespace Yu_Service.Services
                         {
                             ExType = currencyType.Name,
                             Exrate = dExrate,
-                            UTC = dateTime
+                            UTC = DateTime.UtcNow//dateTime
                         };
                         currencyList.Add(currencyModel);
                     }

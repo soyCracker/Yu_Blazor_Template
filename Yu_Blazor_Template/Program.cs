@@ -4,8 +4,7 @@ using MudBlazor.Services;
 using Yu_Blazor_Template;
 using Yu_Blazor_Template.Settings;
 using Yu_Blazor_Template.ViewModels.Currency;
-using Yu_Service.Interfaces;
-using Yu_Service.Services;
+using Yu_Blazor_Template.ViewModels.NormalCurrency;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -23,7 +22,7 @@ builder.Services.AddGraphClient();
 builder.SetMsAuth();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<ICurrencyViewModel, CurrencyViewModel>();
-builder.Services.AddScoped<ICurrencyService, CurrencyService>();
+builder.Services.AddScoped<INormalCurrencyViewModel, NormalCurrencyViewModel>();
 
 //»y¨t
 builder.Services.AddLocalization(option =>

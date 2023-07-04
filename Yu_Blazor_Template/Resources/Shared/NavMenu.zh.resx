@@ -117,10 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NavIndex" xml:space="preserve">
+  <data name="Currency" xml:space="preserve">
+    <value>匯率</value>
+  </data>
+  <data name="FileAccess" xml:space="preserve">
+    <value>檔案存取</value>
+  </data>
+  <data name="Index" xml:space="preserve">
     <value>首頁</value>
   </data>
-  <data name="NavSetting" xml:space="preserve">
+  <data name="Setting" xml:space="preserve">
     <value>設定</value>
   </data>
 </root>
