@@ -112,8 +112,8 @@
       "System.Xml.Linq.dll": "sha256-DW8cutja2JHzqjNbCcMOfOSE5dRqmnAN9xtLlvhPZHk=",
       "System.Xml.ReaderWriter.dll": "sha256-cFmFrO07TglzrEy3oYBfhZ2a\/3ogeu4X+8AIsm0+ONs=",
       "System.Xml.XDocument.dll": "sha256-h4pcdnBKBKL4NK3HGzODM3vf6feyv5j6wiPoCiyE5io=",
-      "Yu_Blazor_Template.dll": "sha256-LlMzNPBhYGqODycV6EzLdFFRqmEfQ2+n4qz1eJpyags=",
-      "Yu_Service.dll": "sha256-lsaCs3paZI0giGyOiFyk+gpDR4AySSm1aOgrER2HhZE="
+      "Yu_Blazor_Template.dll": "sha256-aHz0U+Cfc3v2BMz3dk\/Wf0GRrye3dMuvCd4H7wV\/4bc=",
+      "Yu_Service.dll": "sha256-wL7h\/8h4McYTBPmMI8X4yljW1flBJnTSAnZ18mepfSE="
     },
     "extensions": null,
     "lazyAssembly": null,
@@ -136,7 +136,7 @@
     },
     "satelliteResources": {
       "zh": {
-        "zh\/Yu_Blazor_Template.resources.dll": "sha256-+qOyGe70My8CGDgZZME1ZPLBqY1apW+k1FvX6i\/OCSk="
+        "zh\/Yu_Blazor_Template.resources.dll": "sha256-tGdoUXDjem3gCbyDLcKcdSBMd88vavTrwyGy6wO2N6U="
       }
     }
   }
