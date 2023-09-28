@@ -1,3 +1,4 @@
+using KristofferStrube.Blazor.FileSystemAccess;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using MudBlazor.Services;
@@ -10,17 +11,17 @@ var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
 
-HttpClient httpClient = new HttpClient()
-{
-    BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)
-};
-builder.Services.AddScoped(sp => httpClient);
-await builder.Configuration.LoadSettingJson(httpClient);
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+
+
+builder.Services.AddScoped<GraphAPIAuthorizationMessageHandler>();
+builder.Services.AddHttpClient("GraphAPI",
+        client => client.BaseAddress = new Uri("https://graph.microsoft.com"))
+    .AddHttpMessageHandler<GraphAPIAuthorizationMessageHandler>();
 
 builder.Services.AddMudServices();
-builder.Services.AddGraphClient();
 builder.SetMsAuth();
-builder.Services.AddHttpClient();
+builder.Services.AddFileSystemAccessService();
 builder.Services.AddScoped<ICurrencyViewModel, CurrencyViewModel>();
 builder.Services.AddScoped<INormalCurrencyViewModel, NormalCurrencyViewModel>();
 

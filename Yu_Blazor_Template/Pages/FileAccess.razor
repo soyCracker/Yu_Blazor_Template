@@ -1,8 +1,75 @@
-﻿@page "/FileAccess"
+﻿@using KristofferStrube.Blazor.FileSystemAccess
+@using KristofferStrube.Blazor.FileSystem;
+@inject IFileSystemAccessService FileSystemAccessService;
+@page "/FileAccess"
 
 <PageTitle>FileAccess</PageTitle>
 
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="OpenAndReadFile">Open File Picker for Single File and Read</MudButton>
+
+<br />
+@Text
+
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="OpenAndReadFile">目錄</MudButton>
 
 @code {
+    private string Text = "";
 
+    private async Task OpenAndReadFile()
+    {
+        FileSystemFileHandle? fileHandle = null;
+        try
+        {
+            OpenFilePickerOptionsStartInWellKnownDirectory options = new()
+                {
+                    Multiple = false,
+                    StartIn = WellKnownDirectory.Downloads
+                };
+            var fileHandles = await FileSystemAccessService.ShowOpenFilePickerAsync(options);
+            fileHandle = fileHandles.Single();
+        }
+        catch (JSException ex)
+        {
+            // Handle Exception or cancelation of File Access prompt
+            Console.WriteLine(ex);
+        }
+        finally
+        {
+            if (fileHandle is not null)
+            {
+                var file = await fileHandle.GetFileAsync();
+                Text = await file.TextAsync();
+                StateHasChanged();
+            }
+        }
+    }
+
+    private async Task Directory()
+    {
+        FileSystemFileHandle? fileHandle = null;
+        try
+        {
+            OpenFilePickerOptionsStartInWellKnownDirectory options = new()
+                {
+                    Multiple = false,
+                    StartIn = WellKnownDirectory.Downloads
+                };
+            var directoryHandles = await FileSystemAccessService.ShowDirectoryPickerAsync();
+            
+        }
+        catch (JSException ex)
+        {
+            // Handle Exception or cancelation of File Access prompt
+            Console.WriteLine(ex);
+        }
+        finally
+        {
+            if (fileHandle is not null)
+            {
+                var file = await fileHandle.GetFileAsync();
+                Text = await file.TextAsync();
+                StateHasChanged();
+            }
+        }
+    }
 }
