@@ -1,0 +1,10 @@
+﻿<AuthorizeView>
+    <Authorized>
+        <MudIconButton Icon="@Icons.Material.Filled.Logout" Color="Color.Inherit"
+                       Href="Account/Logout">登出</MudIconButton>
+    </Authorized>
+    <NotAuthorized>
+        <MudIconButton Icon="@Icons.Material.Filled.AccountCircle" Color="Color.Inherit"
+                       Href="Account/Login?redirectUri=/">登入</MudIconButton>
+    </NotAuthorized>
+</AuthorizeView>

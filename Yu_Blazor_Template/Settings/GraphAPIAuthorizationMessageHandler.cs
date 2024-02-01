@@ -6,8 +6,7 @@ namespace Yu_Blazor_Template.Settings
     public class GraphAPIAuthorizationMessageHandler : AuthorizationMessageHandler
     {
         public GraphAPIAuthorizationMessageHandler(IAccessTokenProvider provider,
-        NavigationManager navigationManager)
-        : base(provider, navigationManager)
+            NavigationManager navigationManager) : base(provider, navigationManager)
         {
             ConfigureHandler(
                 authorizedUrls: new[] { "https://graph.microsoft.com" },
